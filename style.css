@@ -1,0 +1,706 @@
+
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  padding-top: 68px; /* Prevent content overlap due to fixed navbar */
+}
+
+/* Header Section */
+header {
+  height: 75px;
+  width: 100%;
+  color: #131212;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; /* Align items to the right */
+  position: fixed; /* Make navbar fixed */
+  z-index: 1000; /* Ensure navbar stays on top */
+  padding: 0 15px;
+  
+}
+
+.navbar {
+  display: flex;
+width: 100%;
+}
+
+.navbar-brand img {
+  height: 50px;
+  position: absolute;
+  left: 30px; /* Keep logo on the left */
+}
+
+.navbar-nav {
+  display: flex;
+  list-style: none;
+  margin-right: 20px; /* Add spacing to the right */
+}
+
+.navbar-nav .nav-item {
+  margin-left: 5px; /* Add spacing between links */
+}
+
+.navbar-nav .nav-link {
+  color: #000; /* Change navbar link color to black */
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none; /* Remove underline */
+  transition: color 0.3s;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #d42f0e; /* Highlight color on hover */
+}
+
+/* Sign In Button */
+#loginBtn {
+  font-size: 16px;
+  padding: 8px 15px;
+  background-color: #e03b1b;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-left: 20px; /* Add spacing between links and button */
+}
+
+#loginBtn:hover {
+  background-color: #d11d1d;
+}
+.savory-spot {
+  font-size: 20px;
+  color: #000;
+  font-style: italic,bold;
+  font-family:Fantasy;
+  top: 10px;
+  margin-left: 33px;
+
+
+
+}
+/*------------------------Recipe section------------------- */
+/* General Styles */
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-family: Arial, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Background Image */
+body {
+  background: url('images/your-background.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: #fff;
+}
+
+/* Header */
+header {
+  height: 75px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  padding: 0 20px;
+}
+
+/* Carousel */
+.carousel-item img {
+  object-fit: cover;
+  height: 600px;
+}
+
+/* Footer */
+footer {
+  padding: 20px;
+  color: #fff;
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+footer ul li a {
+  text-decoration: none;
+  color: #fff;
+  transition: color 0.3s;
+}
+
+footer ul li a:hover {
+  color: #d42f0e;
+}
+
+/* Sign In Button */
+#loginBtn {
+  font-size: 16px;
+  padding: 8px 15px;
+  background-color: #e03b1b;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  position: absolute;
+  right: 20px; /* Move the button to the right corner */
+}
+
+#loginBtn:hover {
+  background-color: #d11d1d;
+}
+
+
+
+/*-------------------All-Recipe----------------*/
+
+/* General Animation Setup */
+.animate {
+  opacity: 0;
+  transform: translateY(50px);
+  animation-fill-mode: forwards;
+  animation-duration: 1.2s;
+  animation-timing-function: ease-out;
+}
+
+/* Fade In Animation */
+.fade-in {
+  animation-name: fadeIn;
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+/* Slide In From Right */
+.slide-in-right {
+  animation-name: slideInRight;
+}
+
+@keyframes slideInRight {
+  from {
+      opacity: 0;
+      transform: translateX(50px);
+  }
+  to {
+      opacity: 1;
+      transform: translateX(0);
+  }
+}
+
+/* Slide In From Left */
+.slide-in-left {
+  animation-name: slideInLeft;
+}
+
+@keyframes slideInLeft {
+  from {
+      opacity: 0;
+      transform: translateX(-50px);
+  }
+  to {
+      opacity: 1;
+      transform: translateX(0);
+  }
+}
+
+/* Zoom In Animation */
+.zoom-in {
+  animation-name: zoomIn;
+}
+
+@keyframes zoomIn {
+  from {
+      opacity: 0;
+      transform: scale(0.9);
+  }
+  to {
+      opacity: 1;
+      transform: scale(1);
+  }
+}
+.animate {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease-out;
+}
+
+.animate-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+main {
+  padding: 2rem;
+}
+.recipe-item{
+  display: inline;
+  font-style: italic;
+  font-size: 20px;
+  color: #000;
+  margin-left: 20px;
+  
+}
+.nav2{
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #000;
+}
+section {
+  margin-bottom: 2rem;
+  padding: 1rem;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  color: #1f0901;
+  font-size: 15px;
+}
+
+.recipe-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.recipe-card {
+  padding: 1rem;
+  background-color: #f8f8f8;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.recipe-card h3 {
+  color: #0a0301;
+  margin-bottom: 0.9rem;
+  font-size: 20px;
+  font-family: Fantasy;
+
+}
+
+.recipe-card p {
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.btn btn-success btn-lg view-recipe-btn{
+  padding: 0.5rem 1rem;
+  background-color: #2e8f4e;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+
+
+.recipe-card button:hover {
+  background-color: #5f4940;
+}
+/*----------------------blog-Section-----------*/
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f9fa;
+}
+
+/* Blog Header Styles */
+.blog-header {
+  background-color: #343a40;
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.blog-header h1 {
+  font-size: 48px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.blog-header p {
+  font-size: 18px;
+  margin-top: 10px;
+  font-style: italic;
+}
+
+/* Blog Posts Section */
+.blog-posts {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 40px;
+}
+
+/* Individual Blog Post Styles */
+.blog-post {
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.blog-post:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Blog Post Image */
+.blog-post img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-bottom: 2px solid #ddd;
+}
+
+/* Blog Post Content */
+.post-content {
+  padding: 20px;
+}
+
+.post-content h2 {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.post-content p {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+/* Read More Button */
+.read-more {
+  display: inline-block;
+  font-size: 16px;
+  font-weight: bold;
+  color: #d9534f;
+  text-decoration: none;
+  padding: 8px 15px;
+  border: 2px solid #d9534f;
+  border-radius: 25px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.read-more:hover {
+  background-color: #d9534f;
+  color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .blog-header h1 {
+      font-size: 36px;
+  }
+
+  .blog-header p {
+      font-size: 16px;
+  }
+
+  .blog-posts {
+      padding: 20px;
+  }
+
+  .blog-post {
+      padding: 10px;
+  }
+
+  .post-content h2 {
+      font-size: 20px;
+  }
+
+  .post-content p {
+      font-size: 14px;
+  }
+
+  .read-more {
+      font-size: 14px;
+      padding: 6px 12px;
+  }
+} 
+/*----------------About-us---------------*/
+/* Main Section */
+main {
+  padding: 40px;
+}
+/* General styles */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+/* Background image for the entire page */
+.bg {
+  background-color: #f1ecec;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* About Us Section */
+.py-3 {
+  background-color: rgb(236, 229, 229);
+  padding: 50px 15px;
+  color: rgb(14, 13, 13);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+/* Styling for section content */
+h2 {
+  margin-top: 60px;
+  font-family: fantasy;
+  font-size: 50px;
+  color: #0f0c0c;
+  text-align: center;
+}
+
+p {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #080808;
+}
+
+hr {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  margin: 20px 0;
+}
+
+/* Flexbox for text and image */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px;
+}
+
+.col-text {
+  flex: 1;
+}
+
+.col-image {
+  flex: 1;
+  text-align: center;
+}
+
+.col-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .row {
+    flex-direction: column;
+  }
+}
+
+/*--------------------Contact-us-------------*/
+
+/* Styling for Contact Us Headers */
+.contact-header {
+  font-size: 36px;
+  font-weight: bold;
+  font-style: italic;
+  color: #333;
+  margin-top: 20px;
+  text-decoration: underline; /* Optional, for emphasis */
+}
+
+
+#contact-form {
+  max-width: 600px;
+  margin: 40px auto; /* Center the form */
+}
+
+#contact-form h2 {
+  color: #333;
+  font-weight: bold;
+}
+
+form {
+  background: #ffffff; /* White background for the form */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+form .form-label {
+  font-weight: bold;
+  color: #555;
+}
+
+form .form-control {
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  padding: 10px;
+  font-size: 16px;
+}
+
+form .form-control:focus {
+  border-color: #ff6f61; /* Highlight border on focus */
+  box-shadow: 0 0 5px rgba(255, 111, 97, 0.5);
+}
+
+form button {
+  background-color: #ff6f61;
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+  padding: 20px 40px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: #e55c50;
+
+}
+
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+.content {
+  padding: 20px;
+  text-align: center;
+}
+
+/* Footer Styles */
+footer {
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: grey; /* Unified grey background */
+  color: #fff; /* White text color */
+  font-size: 15px;
+  padding: 20px 0;
+  margin-top: 40px;
+}
+
+/* Footer Container */
+footer .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Footer Row */
+footer .row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+/* Footer Columns */
+footer .col {
+  flex: 1 1 30%;
+  margin-bottom: 20px;
+}
+
+footer .col h3 {
+  margin-bottom: 15px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #ebe0e0;
+}
+
+footer .col ul {
+  list-style: none;
+  padding: 0;
+}
+
+footer .col ul li {
+  margin-bottom: 10px;
+}
+
+footer .col ul li a {
+  color: #f1e8e8;
+  text-decoration: none;
+  transition: color 0.3s;
+  font-style: bold;
+}
+
+footer .col ul li a:hover {
+  color: #cf0a0a;
+}
+
+/* Contact Section */
+footer .col p {
+  margin-bottom: 10px;
+}
+
+footer .col a {
+  color: #fff;
+  text-decoration: none;
+}
+
+footer .col a:hover {
+  color: #ffcccb;
+}
+
+/* Social Icons */
+footer .social-icons a {
+  font-size: 20px;
+  color: #e04f4f;
+  margin-right: 15px;
+  transition: color 0.3s;
+}
+
+footer .social-icons a:hover {
+  color: #e03b1b;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+  color: #ddd;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  footer .row {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  footer .col {
+    margin-bottom: 20px;
+  }
+}
+
